@@ -58,6 +58,13 @@ func setupGatingService(c *cli.Context) {}
 
 // helper function to setup the remote from the CLI arguments.
 func SetupRemote(c *cli.Context) (remote.Remote, error) {
+	fmt.Println("github: ", c.Bool("github"))
+	fmt.Println("gitlab: ", c.Bool("gitlab"))
+	fmt.Println("bitbucket: ", c.Bool("bitbucket"))
+	fmt.Println("stash: ", c.Bool("stash"))
+	fmt.Println("gogs: ", c.Bool("gogs"))
+	fmt.Println("gitea: ", c.Bool("gitea"))
+	fmt.Println("coding: ", c.Bool("coding"))
 	switch {
 	case c.Bool("github"):
 		return setupGithub(c)
